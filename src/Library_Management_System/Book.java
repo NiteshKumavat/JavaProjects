@@ -15,7 +15,6 @@ public class Book {
         this.rentalPrice = price / 20; // Default: 5% of purchase price
     }
 
-    // --- GETTERS ---
     public String getName() { return this.name; }
     public String getAuthorName() { return this.authorName; }
     public String getBSNID() { return this.bsnId; }
@@ -24,7 +23,6 @@ public class Book {
     public float getPrice() { return this.price; }
     public float getRentalPrice() { return this.rentalPrice; }
 
-    // --- SETTERS & VALIDATIONS ---
     public void setName(String name) {
         if (name == null || name.trim().isEmpty()) {
             System.out.println("Invalid name!");
@@ -44,7 +42,6 @@ public class Book {
         return true;
     }
 
-    // --- BUSINESS LOGIC METHODS ---
     public boolean buyCopy() {
         if (stockQuantity > 0) {
             stockQuantity--;
